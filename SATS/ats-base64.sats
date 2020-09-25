@@ -20,7 +20,7 @@ fn
   ( i: string(n)
   , i_sz: size_t(n)
   ):
-  Option_vt( [m:pos][l:agz] @( arrayptr(byte,l,m) , size_t(m), [m1:pos] size_t(m1))) (* result can contain NULL-chars *)
+  Option_vt( [m:pos][l:agz] @( arrayptr(byte,l,m) , size_t(m), [m1:pos | m1 <= m] size_t(m1))) (* result can contain NULL-chars *)
   
 fn
   encode0
